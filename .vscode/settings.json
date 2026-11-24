@@ -1,0 +1,5 @@
+{
+  "clangd.arguments": [
+    "--query-driver=/Users/val/.platformio/packages/toolchain-riscv32-esp/bin/riscv32-esp-elf-g++"
+  ]
+}
