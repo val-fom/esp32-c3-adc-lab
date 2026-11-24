@@ -1,18 +1,19 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+constexpr int ADC_PIN = 0;
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Serial.begin(115200);
+
+  analogReadResolution(12);
+  analogSetPinAttenuation(ADC_PIN, ADC_11db);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
+  int raw = analogRead(ADC_PIN);
+  uint32_t millivolts = analogReadMilliVolts(ADC_PIN);
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  Serial.printf("ADC: %d | Voltage: %u mV\n", raw, millivolts);
+
+  delay(500);
 }
