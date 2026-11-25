@@ -4,7 +4,7 @@
 **Hardware:** ESP32-C3 SuperMini, breadboard, multimeter, 100 nF ceramic capacitor  
 **Setup:** 3.3V → 10kΩ → GPIO0 → ID resistor → GND; capacitor between GPIO0 and GND, in parallel with the ID resistor.
 
-<!-- Breadboard photo: add ../images/lab-002-breadboard.jpg -->
+![Breadboard setup](../images/lab-002-breadboard.jpg)
 
 ## Method
 
