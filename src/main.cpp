@@ -10,10 +10,9 @@ void setup() {
 }
 
 void loop() {
-  int raw = analogRead(ADC_PIN);
-  uint32_t millivolts = analogReadMilliVolts(ADC_PIN);
+  int voltage = analogReadMilliVolts(ADC_PIN);
 
-  Serial.printf("ADC: %d | Voltage: %u mV\n", raw, millivolts);
+  Serial.println(voltage);
 
-  delay(500);
+  delay(10);
 }
